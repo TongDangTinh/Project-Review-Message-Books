@@ -15,6 +15,7 @@ gem "bootstrap", "~> 4.4.1"
 gem "jquery-rails"
 gem "font-awesome-rails"
 gem "devise"
+gem "paperclip"
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do

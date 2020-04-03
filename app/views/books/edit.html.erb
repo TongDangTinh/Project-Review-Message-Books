@@ -4,7 +4,9 @@
   <div class="field">
     <%= f.select :category_id, @categories %>
   </div>
-  
+  <div class="field">
+    <%= f.file_field :book_img %>
+  </div>
   <div class="field">
     <%= f.label :title %> 
     <%= f.text_field :title, class: "form-control" %>
