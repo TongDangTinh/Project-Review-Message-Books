@@ -1,12 +1,26 @@
-<%= form_for(@book) do |f| %>
-  <%= f.label :title %> 
-  <%= f.text_field :title, class: "form-control" %>
-
-  <%= f.label :descripton %>
-  <%= f.text_area :description, class: "form-control" %>
-
-  <%= f.label :author %>
-  <%= f.text_field :author, class: "form-control" %>
-
-  <%= f.submit yield(:button_text) %>
+<%= form_for @book, html: { multipart: true } do |f| %>
+  <div class="field">
+    <%= select_tag(:category_id, options_for_select(@categories),
+    prompt: "Select a category") %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :title %> 
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :descripton %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form-control" %>
+   </div>
+    
+  <div class="field">
+    <%= f.submit yield(:button_text) %>
+  </div>
+ 
 <% end %>
