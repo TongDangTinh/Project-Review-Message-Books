@@ -45,7 +45,11 @@
 
       <% if user_signed_in? %>
         <li>
-          <%= link_to t(".add_book"), new_book_path, class: "text-muted" %>
+          <%= link_to t("Add Book"), new_book_path, class: "text-muted mr-3" %>
+        </li>
+        <li>
+          <%= link_to t("Add Resquestion"), new_suggest_book_path, 
+            class: "text-muted" %>
         </li>
       <% end %>
     </ul>
