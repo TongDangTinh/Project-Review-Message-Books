@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :books do 
     resources :reviews
   end
-  resources :suggest_books do 
+  resources :messages do 
     resources :comments
   end
   root "books#index"

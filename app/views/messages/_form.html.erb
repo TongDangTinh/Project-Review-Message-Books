@@ -1,0 +1,13 @@
+<%= form_for(@message) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="field mt-3">
+    <%= f.submit yield(:button_text), class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
