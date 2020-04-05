@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :books do 
     resources :reviews
   end
+
+  resources :messages
   root "books#index"
 end
